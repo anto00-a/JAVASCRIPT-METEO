@@ -1,0 +1,436 @@
+@font-face {
+  font-family: 'Quiet Sans Light';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Quiet Sans Light'), url('Flatit  QuietSansLight.woff') format('woff');
+  }
+  
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+body,html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Quiet Sans Light';
+  }
+
+main{
+  height: 100%;
+  background:url(immagini/foto1.jpg) no-repeat center center;
+  background-size: cover;
+  overflow: visible;
+}
+
+#title{
+    margin-bottom: 50px;
+    padding: 10px;
+    font-size: 30px;
+    color: white;
+}
+
+#container{
+    width:80%;
+    height: 80%;
+    background-color: black;
+    background: rgba(0,0,0,0.7);
+    margin: auto;
+    border-radius: 40px;
+    color: #fff;
+    position: relative;
+    
+}
+/*------------------------
+
+          HEAD
+
+--------------------------*/          
+#container_head{
+  height: 30%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+#info_time{
+  width: 340px;
+  margin:  5px 0  0 25px; 
+}
+
+#time{
+  font-size: 40px;
+  padding: 5px;
+  text-align: left;
+  margin-left: 25px;
+}
+
+#data{
+  font-size: 20px;
+  padding: 5px;
+  text-align: left;
+  margin-left: 25px
+}
+#city{
+  font-size: 40px;
+}
+#citta{
+  width: 340px;
+  text-align: center;
+}
+
+#info_weather{
+  width: 340px;
+  display: flex;
+  margin: 80px 30px 0 0;
+}
+
+.no-flex{
+  margin: auto;
+  margin-left: 0;
+  display: block;
+}
+.background_repeat{
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#tempo{
+  font-size: 25px;
+  padding-left:5px ;
+}
+
+
+#gradi{
+  font-size:50px;
+}
+
+#info_weather img{
+  height: 100%;
+}
+#haw-weather{
+  height: 100%;
+  width: 40%;
+}
+/*-------------------
+
+        CENTER
+
+--------------------*/        
+
+#container_center{
+  height: 40%;
+  margin-left: 25px;
+}
+#umidità,#max_min,#vento{
+  margin-left: 15px;
+}
+#container_center ul{
+  list-style: none;
+  font-size: 25px;
+  color: #fff;
+}
+
+#form{
+  font-size: 25px;
+  margin:0 0 70px 25px;
+}
+
+#form img{
+  margin-right: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.center_li{
+  margin: 0 0 30px 20px ;
+  text-align: center;
+}
+
+ul div{
+  display: flex;
+}
+
+#container_center li{
+  display: flex; 
+}
+.umidità::before {
+  content:url('icone/umidita.svg');
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;;
+}
+
+.max_min::before{
+  content:url('icone/temperature.svg');
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;;
+}
+.vento::before{
+  content:url('icone/wind.svg');
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;;
+}
+
+input[type=text] {
+  width: 25%;
+  height: 20px;;
+  margin:5px 10px 0 15px;
+  border: 3px solid #fff;
+  outline: none;
+}
+input[type=text]:focus {
+  border: 3px solid #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+#invia{
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: rgba(0,0,0,0);
+  outline: none;
+}
+
+#invia img{
+  text-align: center;
+}
+button:hover{
+  cursor: pointer;
+  border: none;
+  
+}
+
+
+/*--------------
+
+BOTTOM
+
+-----------------*/
+
+#container_bottom{
+  height: 20%;
+  display: flex;
+  justify-content: center; 
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.cards{
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  position: absolute;
+  bottom: 0;  
+  
+}
+#container_bottom ul{
+  list-style: none;
+}
+.card{
+  text-align: center;
+  width: 20%;
+  height: 100%;
+  font-size: 20px;
+}
+#haw-weather1{
+  height: 60px;
+}
+
+#haw-weather2{
+  height: 60px;
+}
+.card:hover{
+  border: 1px solid rgba(255, 255, 255, 0.466);
+  border-radius: 25px 25px 0 0;
+  border-bottom: none;
+  background: rgba(255, 255, 255, 0.068);
+}
+
+#pop_up{
+  position: relative;
+  margin: auto;
+  width: 500px;
+  height: 300px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #000000;
+  background: rgba(0,0, 0, 0.6);
+  color: #26EEA0;
+}
+
+#reset{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+  background-color: #04A5F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+.blur{
+  filter:blur(3px);
+}
+
+
+.show{
+  display: block;
+  animation-name: example;
+  animation-duration: 2.3s;  
+  animation-fill-mode: forwards;
+}
+.hidden{
+  display: none;
+}
+
+@keyframes example{
+  from{bottom:0px ; display: block;}
+  to{bottom: 600px; margin: auto;}
+}
+
+@keyframes showInfo{
+  from{opacity: 0;}
+  to{opacity:1px;}
+}
+/*
+color: #04A5F3;
+*/
+
+
+
+
+
+@media screen and (max-width:600px){
+  #title{
+    font-size: 20px;
+  }
+  #container{
+    overflow: visible;
+    
+  }
+  /*-------------------
+        head
+  -----------------*/      
+  #container_head{
+    margin:0;
+    display: block;
+    height: 40%;
+  }
+  #info_time{
+    width: auto;
+    margin: 0;
+  }
+  #time{
+    display: none;
+  }
+  #data{
+    margin-left: 0;
+    font-size: 20px;
+    text-align: center;
+  }
+  #citta{
+    width: auto;
+  }
+  #city{
+    font-size: 30px;
+  }
+
+  #info_weather{
+    margin-left: auto;
+    margin-top: 25px;
+    width: 60%;
+    height: 50%;
+    
+  }
+  #haw-weather{
+    width: 50%;
+    height: auto;
+  }
+  #gradi{
+    font-size: 30px;
+  }
+  #tempo{
+    font-size: 15px;
+  }
+/*--------------------
+          center
+---------------------*/
+
+
+
+  #container_center{
+    height: 40%;
+    margin: 0;
+  }
+  #weath{
+    font-size: 10px;
+  }
+
+  label{
+    font-size: 20px;
+  }
+
+  ul div{
+    display: block;
+  }
+
+  .center_li{
+    margin: 0;
+  }
+
+  input[type=text] {
+    width: 40%;
+    height: 15px;
+  }
+  #umidità,#max_min,#vento{
+    margin: auto !important;
+    width: fit-content;
+  }
+  #container_center li{
+    font-size: 15px;
+    margin-left: 0;
+  }
+
+  #container_center li::before{
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+  }
+
+
+  li p{
+    display: block;
+  }
+
+  #container_center ul{
+    display: flex;
+    justify-content: space-around;  
+  }
+ 
+  /*---------------------
+          bottom
+  --------------------*/
+
+ 
+  .card{
+    width: 50%;
+    margin: 0;
+    font-size: 15px;
+  }
+  #pop_up{
+    width: 300px;
+    height: 150px;
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/app2.js" defer></script>
+    <title>InfoWeather</title>
+</head>
+<body>
+    <main>
+        <div id="title">
+            <h1>INFOWEATHER</h1>
+        </div>
+        <div id="container">
+            <div id="container_head">
+                <div id="info_time">
+                    <h1 id="time"></h1>
+                    <h3 id="data"></h3>
+                </div>
+                <div id="citta"><h1 id="city"></h1></div>
+                <div id="info_weather">
+                    <div id="haw-weather"></div>
+                    <div class="no-flex">
+                        <h1 id="gradi"></h1>
+                        <h2 id="tempo"></h2>
+                    </div>
+                </div>
+            </div>
+            <div id="container_center">
+                <div id="form">
+                    <label label="weath"><img src="assets/icone/buildings.svg">Città:</label>
+                    <input type="text" id="weath" name="weath">
+                    <button id="invia" ><img src="assets/icone/pin.svg"></button>
+                </div>
+                <ul>
+                    <div><li class="umidità center_li ">Umidità: </li><li id="umidità"></li></div>
+                    <div><li class="max_min center_li">T° max/min: </li><li id="max_min"></li></div>
+                    <div><li class="vento center_li">Vento: </li><li id="vento"></li></div>
+                </ul>
+            </div>
+            <div id="container_bottom">
+               <div class="cards"> 
+                    <div class="card">
+                        <ul>
+                            <li id="haw-weather1"></li>
+                            <li id="max_min_1"></li>
+                            <li id="data1"></li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <ul>
+                            <li id="haw-weather2"></li>
+                            <li id="max_min_2"></li>
+                            <li id="data2"></li>
+                        </ul>
+                    </div> 
+                </div>         
+            </div>    
+        </div>
+    </main>  
+    <div id="pop_up" class="hidden">
+        <h1>Città inserita non valida o inesistente</h1>
+        <button id="reset">Indietro</button>    
+    </div>  
+</body>
+</html>
