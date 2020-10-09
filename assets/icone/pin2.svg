@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 14 20" style="enable-background:new 0 0 14 20;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#_xD83D__xDD39_-Icon-Color_1_);}
+</style>
+<title>pin_drop</title>
+<desc>Created with Sketch.</desc>
+<g id="Icons">
+	<g id="Outlined" transform="translate(-615.000000, -3212.000000)">
+		<g id="Maps" transform="translate(100.000000, 3068.000000)">
+			<g id="Outlined-_x2F_-Maps-_x2F_-pin_x5F_drop" transform="translate(510.000000, 142.000000)">
+				<g>
+					<polygon id="Path" class="st0" points="0,0 24,0 24,24 0,24 					"/>
+					
+						<linearGradient id="_xD83D__xDD39_-Icon-Color_1_" gradientUnits="userSpaceOnUse" x1="17" y1="2" x2="17" y2="22" gradientTransform="matrix(1 0 0 -1 -5 24)">
+						<stop  offset="0" style="stop-color:#02A1F9"/>
+						<stop  offset="1" style="stop-color:#28F19E"/>
+					</linearGradient>
+					<path id="_xD83D__xDD39_-Icon-Color" class="st1" d="M5,20h14v2H5V20z M18,8c0-3.3-2.7-6-6-6S6,4.7,6,8c0,4.5,6,11,6,11
+						S18,12.5,18,8z M8,8c0-2.2,1.8-4,4-4s4,1.8,4,4c0,2.1-2.1,5.5-4,7.9C10.1,13.5,8,10.1,8,8z M12,6c-1.1,0-2,0.9-2,2s0.9,2,2,2
+						s2-0.9,2-2S13.1,6,12,6z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

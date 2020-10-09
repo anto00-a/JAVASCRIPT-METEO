@@ -12,6 +12,8 @@ let hawWeather2= document.getElementById('haw-weather2');
 let hawWeather=[hawWeatherCurrent,hawWeather1,hawWeather2];
 let conditionCode;
 
+
+
 infoDate();
 
 
@@ -30,13 +32,14 @@ function infoDate(){
     minutes=data_now.getMinutes();
     day1=week[data_now.getDay()+1];
     day2=week[data_now.getDay()+2];
-    console.log(week.indexOf(day2))
-    if(week.indexOf(day2)>6){
-       day2=week[0];
-    }else if(week.indexOf(day1)>6){
+    if(week.indexOf(day2)===-1){
+        day2 = week[0];
+        console.log(day2)
+        console.log(week.indexOf(day1))
+    }else if(week.indexOf(day1)===-1){
         day1=week[0];
+        console.log(day1)
     }
-    console.log(day2)
     if(minutes<10){
         minutes = '0'+minutes;
     }
@@ -48,15 +51,13 @@ function infoDate(){
 
 
 
-function requestData(){
-    let cityInput = document.getElementById('weath').value;
+async function requestData(cityInput){
     let apiKey = '6fe12b552bfe4b069cf153841201008';
     let apiUrl = 'http://api.weatherapi.com/v1/forecast.json?key='+apiKey+'&q='+cityInput+'&days=10&lang=it';
-    request = new XMLHttpRequest(); 
-    request.open('GET', apiUrl,true);
-    request.onload = function(){
-        errorHandler();
-        dati = JSON.parse(this.response);
+    try{
+        const response = await fetch(apiUrl)
+        errorHandler(response)
+        const dati=await response.json();
         wind = dati.current.wind_kph;
         humidity= dati.current.humidity;
         max=dati.forecast.forecastday[0].day.maxtemp_c;
@@ -68,15 +69,16 @@ function requestData(){
         min1=dati.forecast.forecastday[1].day.mintemp_c;
         min2=dati.forecast.forecastday[2].day.mintemp_c;
         conditionCode=[dati.current.condition.code,dati.forecast.forecastday[1].day.condition.code,dati.forecast.forecastday[2].day.condition.code,];
-        postData();
-        iconChange()
-
+        postData(dati);
+        iconChange();
+        
+    }catch(error){
+        console.log(error)
     }
-    request.send();
 }
 
 
-function postData(){
+function postData(dati){
     infoDate();
     temp_a=parseInt(temp_a);
     max=parseInt(max);
@@ -159,10 +161,10 @@ function iconChange(){
 
 
 
-function errorHandler(){
-    let error =request.status;
+ function errorHandler(response){
+    let error = response.status;
     if(error <400){
-        return
+        console.log('ok')
     }else{ 
         document.querySelector('main').classList.add('blur');
         document.getElementById('pop_up').classList.add('show'); 
@@ -184,5 +186,19 @@ function resetApp(){
 
 const resetBtn = document.getElementById('reset');
 const inviaBtn = document.getElementById('invia');
-inviaBtn.addEventListener('click', requestData)
 resetBtn.addEventListener('click',resetApp)
+let cityfield = document.getElementById('weath');
+cityfield.addEventListener("keypress",function processKey(e){
+    if (e.keyCode == 13)  {
+        requestData(cityfield.value)
+        e.preventDefault()
+        cityfield.value='';
+    }
+})
+inviaBtn.addEventListener('click', function processClick(e){
+    requestData(cityfield.value)
+    e.preventDefault()
+    cityfield.value=''
+})
+
+
