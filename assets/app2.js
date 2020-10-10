@@ -35,8 +35,6 @@ function infoDate(){
     if(week.indexOf(day1)===-1){
         day1=week[0];
         day2=week[1];
-        console.log(week.indexOf(day1))
-        console.log(week.indexOf(day2))
     }else if(week.indexOf(day2)===-1){
         day1 = week[6];
         day2 = week[0];
@@ -177,7 +175,6 @@ function iconChange(){
         document.getElementById('pop_up').classList.remove('hidden')
         infoDate();
     }
- console.log(error)
 }
 
 
