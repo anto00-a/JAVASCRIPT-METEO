@@ -32,14 +32,20 @@ function infoDate(){
     minutes=data_now.getMinutes();
     day1=week[data_now.getDay()+1];
     day2=week[data_now.getDay()+2];
-    if(week.indexOf(day2)===-1){
-        day2 = week[0];
-        console.log(day2)
-        console.log(week.indexOf(day1))
-    }else if(week.indexOf(day1)===-1){
+    if(week.indexOf(day1)===-1){
         day1=week[0];
-        console.log(day1)
+        day2=week[1];
+        console.log(week.indexOf(day1))
+        console.log(week.indexOf(day2))
+    }else if(week.indexOf(day2)===-1){
+        day1 = week[6];
+        day2 = week[0];
+        
     }
+    
+
+
+
     if(minutes<10){
         minutes = '0'+minutes;
     }
