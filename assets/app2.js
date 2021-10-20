@@ -57,7 +57,7 @@ function infoDate(){
 
 async function requestData(cityInput){
     let apiKey = '6fe12b552bfe4b069cf153841201008';
-    let apiUrl = 'http://api.weatherapi.com/v1/forecast.json?key='+apiKey+'&q='+cityInput+'&days=10&lang=it';
+    let apiUrl = 'https://api.weatherapi.com/v1/forecast.json?key='+apiKey+'&q='+cityInput+'&days=10&lang=it';
     try{
         const response = await fetch(apiUrl)
         errorHandler(response)
